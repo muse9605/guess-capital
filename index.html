@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수도 맞추기 게임 - PyScript</title>
+    
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PyScript 실행 설정 -->
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>🌍 수도 맞추기 게임</h1>
+    <div id="question" class="loading">데이터 로딩 중...</div>
+    
+    <div class="input-group">
+        <input type="text" id="answer" placeholder="정답을 입력하세요" autocomplete="off">
+        <button id="submit-btn" py-click="check_answer">확인</button>
+    </div>
+
+    <div id="result"></div>
+    <div class="score-board">
+        <span>현재 점수: <b id="score-val">0</b></span>
+    </div>
+</div>
+
+<!-- 파이썬 코드 파일 연결 -->
+<script type="py" src="main.py" config='{"packages": []}'></script>
+
+</body>
+</html>
